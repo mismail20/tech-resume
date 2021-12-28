@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { AwesomeButton } from "react-awesome-button";
+import 'react-awesome-button/dist/themes/theme-c137.css';
 import AddField from "./AddField"
 import Field from "./Field"
-import Footer from "./Footer"
 
 export default function App() {
 
@@ -13,7 +14,7 @@ export default function App() {
     });
   }
 
-  function deleteNote(id) { /* we filter out our array of notes based on id */
+  function deleteNote(id) {
     setFields(prevFields => {
       return prevFields.filter((item, index) => {
         return index !== id;
@@ -38,7 +39,7 @@ export default function App() {
           />
         );
       })}
-      <Footer />
+      {fields.length > 0 && <AwesomeButton> Submit </AwesomeButton>}
     </div>
 
 );
