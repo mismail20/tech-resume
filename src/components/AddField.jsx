@@ -6,6 +6,7 @@ import ProjectsIcon from "@material-ui/icons/GitHub";
 import SkillsIcon from "@material-ui/icons/LocalActivity";
 
 
+
 export default function AddField(props) {
 
     const [field, setField,] = useState({
@@ -34,20 +35,20 @@ export default function AddField(props) {
     }
 
 
-    var buttons = [{id: 1, title:'Bio' ,input1:'Full Name',input2:'Email',input3:'Mobile',desc:'Github',icon:<InfoIcon/>},
+    var buttons = [{key: 1, title:'Bio' ,input1:'Full Name',input2:'Email',input3:'Mobile',desc:'Github',icon:<InfoIcon/>},
 
-                   {id: 2,title:'Education',input1:'University',input2:'Degree',input3:'Location',desc:'Duration',icon:<SchoolIcon/>},
+                   {key: 2, title:'Education',input1:'University',input2:'Degree',input3:'Location',desc:'Duration',icon:<SchoolIcon/>},
 
-                   {id: 3,title:'Work History',input1:'Company and Role',input2:'Location',input3:'Duration',desc:'Description',icon:<WorkIcon/>},
+                   {key: 3, title:'Work History',input1:'Company and Role',input2:'Location',input3:'Duration',desc:'Description',icon:<WorkIcon/>},
 
-                   {id: 4,title:'Projects',input1:'Title',input2:'Technology',input3:'Link',desc:'Description',icon:<ProjectsIcon/>},
+                   {key: 4, title:'Projects',input1:'Title',input2:'Technology',input3:'Link',desc:'Description',icon:<ProjectsIcon/>},
 
-                   {id: 5,icon:<SkillsIcon/>}]
+                   {key: 5, icon:<SkillsIcon/>}]
     return (
       <div>
         {buttons.map((item) => (
             <button
-            key = {item.id}
+            key = {item.key}
             onClick={submitField}
             onMouseEnter= {() => handleChange(item.title, item.input1, item.input2, item.input3, item.desc)}
             style={{margin:'5px', }}

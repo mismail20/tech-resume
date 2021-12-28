@@ -13,7 +13,7 @@ export default function App() {
     });
   }
 
-  function deleteNote(id) {
+  function deleteNote(id) { /* we filter out our array of notes based on id */
     setFields(prevFields => {
       return prevFields.filter((item, index) => {
         return index !== id;
@@ -27,14 +27,14 @@ export default function App() {
       {fields.map((item, index) => {
         return (
           <Field
-          key = {index}
-          id = {index}
-          title ={item.title}
-          input1 = {item.input1}
-          input2 = {item.input2}
-          input3 = {item.input3}
-          desc =  {item.desc}
-          onDelete = {deleteNote}
+            key = {index}
+            id = {index}
+            title ={item.title}
+            input1 = {item.input1}
+            input2 = {item.input2}
+            input3 = {item.input3}
+            desc =  {item.desc}
+            onDelete = {deleteNote}
           />
         );
       })}
