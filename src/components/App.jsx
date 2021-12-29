@@ -42,5 +42,5 @@ export default function App() {
       {fields.length > 0 && <AwesomeButton> Submit </AwesomeButton>}
     </div>
 
-);
+  );
 }
