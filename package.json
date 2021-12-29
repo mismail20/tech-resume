@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
+    "@react-pdf/renderer": "^2.0.21",
     "react": "16.8.6",
     "react-awesome-button": "^6.5.1",
     "react-dom": "16.8.6",

@@ -9,40 +9,34 @@ html {
 body {
   background: #E8E9EF;
   padding: 0 16px;
-  text-align: center;
 }
+
+.row {
+  position:  absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.column1 {
+  text-align: center;
+  width: 33.33%;
+  padding: 15px;
+  margin:auto;
+}
+
+.column2 {
+  float: right;
+  width: 33.33%;
+  padding: 15px;
+}
+
+
 h3 {
   color: #475472;
 }
-header {
-  background-color: #475472;
-  margin: auto -16px;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-  color: #fff;
-  font-family: "McLaren", cursive;
-  font-weight: 200;
-}
-
-
-footer {
-  text-align: center;
-  width: 100%;
-  height: 2.5rem;
-  position: absolute;
-  bottom: 0;
-}
-
-footer p {
-  color: #ccc;
-}
-
-
 
 form {
+
   position: relative;
   width: 480px;
   margin: 30px auto 20px auto;
@@ -51,8 +45,8 @@ form {
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
-form input,
-form textarea {
+
+form input,form textarea {
   width: 100%;
   border: none;
   padding: 4px;
@@ -81,7 +75,6 @@ form button {
   cursor: pointer;
   outline: none;
 }
-
 
 .buttonContainer {
   display: inline-block;
