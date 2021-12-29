@@ -33,7 +33,7 @@ export default function AddField(props) {
     return (
       <div>
         {buttons.map((item) => (
-          <div class ="buttonContainer" key = {item.key} onMouseEnter= {() => handleChange(item.title, item.input1, item.input2, item.input3, item.desc)}>
+          <div className ="buttonContainer" key = {item.key} onMouseEnter= {() => handleChange(item.title, item.input1, item.input2, item.input3, item.desc)}>
             <AwesomeButton onPress={submitField} style={{margin:'5px'}} type="primary">
               {item.icon}
             </AwesomeButton>

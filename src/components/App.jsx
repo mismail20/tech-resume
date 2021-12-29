@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { AwesomeButton } from "react-awesome-button";
 import 'react-awesome-button/dist/themes/theme-c137.css';
-import AddField from "./AddField"
-import Field from "./Field"
+import AddField from "./AddField";
+import Field from "./Field";
+import Footer from "./Footer";
 
 export default function App() {
 
@@ -40,7 +41,9 @@ export default function App() {
         );
       })}
       {fields.length > 0 && <AwesomeButton> Submit </AwesomeButton>}
+      <Footer />
     </div>
+
 
   );
 }
