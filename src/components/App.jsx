@@ -9,21 +9,17 @@ export default function App() {
 
   const [fields, setFields] = useState([]);
   const [text, setText] = useState([]);
+  const [isClicked, setClicked] = useState(false);
+
+  function setFieldClicked(bool){
+    setClicked(bool);
+  }
 
   function addText(newText) {
     setText(prevText => {
       return [...prevText, newText];
     });
   }
-
-  function deleteText(id) {
-    setText(prevFields => {
-      return prevFields.filter((item, index) => {
-        return index !== id;
-      });
-    });
-  }
-
 
   function addField(newField) {
     setFields(prevFields => {
@@ -37,20 +33,31 @@ export default function App() {
         return index !== id;
       });
     });
+    setText(prevFields => {
+      return prevFields.filter((item, index) => {
+        return index !== id;
+      });
+    });
   }
 
 
 
   return (
     <div className ="row">
+
       <div className= "column2">
         <PDFViewer height= {800} width = {500}>
           <Resume
           text = {text}/>
         </PDFViewer>
       </div>
+
       <div className= "column1">
-        <AddField onAdd = {addField}/>
+        <AddField
+          onAdd = {addField}
+          onClick = {setFieldClicked}
+          fieldClicked = {isClicked}/>
+
         {fields.map((item, index) => {
           return (
             <Field
@@ -63,7 +70,7 @@ export default function App() {
               desc =  {item.desc}
               onDelete = {deleteNote}
               onAddText = {addText}
-              onDeleteText = {deleteText}
+              onClick = {setFieldClicked}
             />
           );
         })}

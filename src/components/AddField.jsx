@@ -19,16 +19,14 @@ export default function AddField(props) {
                    {key: 4, title:'Project',input1:'Title',input2:'Technology',input3:'Link',desc:'Description',icon:<ProjectsIcon/>},
                    {key: 5, title: 'Skill' ,input1: 'Name of Skill', icon:<SkillsIcon/>}]
 
-
     function handleChange(title,input1,input2,input3,desc) {
       setField({ title: title, input1: input1, input2: input2, input3: input3, desc: desc});
     }
 
-
     function submitField() {
-      props.onAdd(field);
-    }
-
+      !props.fieldClicked ? props.onAdd(field) : alert('Submit or Delete a field, before selecting another one.')
+      !props.fieldClicked ? props.onClick(true): console.log("buttons disabled")
+      }
 
     return (
       <div>

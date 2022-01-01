@@ -21,8 +21,8 @@ export default function Resume(props) {
               key = {index}
               style={styles.section}>
             <Text>
-                {item.title}
-                {'\n\n'}
+                {item.title !== 'Bio' ? item.title: console.log("Bio")}
+                {item.title !== 'Bio' ? '\n\n': console.log("Bio")}
                 {item.input1}
                 {'\n\n'}
                 {item.input2}
@@ -30,7 +30,6 @@ export default function Resume(props) {
                 {item.input3}
                 {'\n\n'}
                 {item.desc}
-                {'\n\n'}
             </Text>
             </View>
           ))}
