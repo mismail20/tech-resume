@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AwesomeButton } from "react-awesome-button";
-import 'react-awesome-button/dist/themes/theme-c137.css';
+import 'react-awesome-button/dist/themes/theme-rickiest.css';
 import InfoIcon from "@material-ui/icons/Info";
 import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
@@ -32,7 +32,7 @@ export default function AddField(props) {
       <div>
         {buttons.map((item) => (
           <div className ="buttonContainer" key = {item.key} onMouseEnter= {() => handleChange(item.title, item.input1, item.input2, item.input3, item.desc)}>
-            <AwesomeButton onPress={submitField} style={{margin:'5px'}} type="primary">
+            <AwesomeButton onPress={submitField} style={{margin:'5px'}} type="github">
               {item.icon}
             </AwesomeButton>
           </div>
