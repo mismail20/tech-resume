@@ -11,7 +11,7 @@ import SkillsIcon from "@material-ui/icons/LocalActivity";
 
 export default function AddField(props) {
 
-    const [field, setField,] = useState({title: "", input1:"", input2:"", input3:"", desc1:"" });
+    const [field, setField,] = useState({title: "", input1:"", input2:"", input3:"", desc:"" });
 
     var buttons = [{key: 1, title:'Bio' ,input1:'Full Name',input2:'Email',input3:'Mobile',desc:'Github',icon:<InfoIcon/>},
                    {key: 2, title:'Education',input1:'University',input2:'Degree',input3:'Location',desc:'Duration',icon:<SchoolIcon/>},
@@ -21,7 +21,7 @@ export default function AddField(props) {
 
 
     function handleChange(title,input1,input2,input3,desc) {
-      setField({ title: title, input1: input1, input2: input2, input3: input3, desc: desc,});
+      setField({ title: title, input1: input1, input2: input2, input3: input3, desc: desc});
     }
 
 

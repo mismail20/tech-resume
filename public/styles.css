@@ -58,16 +58,23 @@ form input,form textarea {
 
 form .delete {
   right: 5px;
+  top: 1px;
+}
+
+form .append {
+right: 5px;
+bottom: 1px;
 }
 
 form .expand {
   left: 5px;
+  top: 1px;
 }
 
 form button {
   color: #E2E4EF;
   position: absolute;
-  top: 1px;
+
   border: none;
   background-color: transparent;
   width: 36px;
