@@ -16,6 +16,7 @@ export default function App() {
   }
 
   function addText(newText) {
+
     setText(prevText => {
       return [...prevText, newText];
     });

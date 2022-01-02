@@ -19,7 +19,7 @@ export default function Field(props) {
   }
 
   function updateText(){
-    if (input["input1"] === '' || input['input2'] === '' || input['input3'] === '' || input['desc'] === '') {
+    if (input["title"] !== 'Skill' && (input["input1"] === '' || input['input2'] === '' || input['input3'] === '' || input['desc'] === '')) {
       alert("Complete all required fields please!");
     }
     else {
