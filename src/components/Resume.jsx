@@ -9,7 +9,6 @@ export default function Resume(props) {
     section: {
       border: '3px solid green',
       padding: '10px',
-      height:'17%',
       fontSize: 14
     },
   });
@@ -18,7 +17,6 @@ export default function Resume(props) {
     section: {
       border: '3px solid blue',
       padding: '10px',
-      height:'20%',
       fontSize: 14
     },
   });
@@ -28,7 +26,6 @@ export default function Resume(props) {
     section: {
       border: '3px solid red',
       padding: '10px',
-      height:'20%',
       fontSize: 14
     },
   });
@@ -37,7 +34,6 @@ export default function Resume(props) {
     section: {
       border: '3px solid yellow',
       padding: '10px',
-      height:'20%',
       fontSize: 14
     },
   });
@@ -46,7 +42,6 @@ export default function Resume(props) {
     section: {
       border: '3px solid orange',
       padding: '10px',
-      height:'9%',
       fontSize: 14
     },
   });

@@ -86,3 +86,9 @@ form button {
 .buttonContainer {
   display: inline-block;
 }
+
+textarea
+{
+resize: none;
+overflow: hidden;
+}
