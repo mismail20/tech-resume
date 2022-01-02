@@ -9,7 +9,7 @@ import Zoom from "@material-ui/core/Zoom";
 export default function Field(props) {
 
   const [input, setInput,] = useState({ key: props.id, title: props.title, input1:"", input2:"", input3:"", desc:"" });
-  const [isExpanded, setExpanded] = useState(false);
+  const [isExpanded, setExpanded] = useState(true);
   const [addDisabled, disableAdd] = useState(false);
   const [buttonText, setButtonText] = useState(<ExpandIcon/>);
 
@@ -19,9 +19,15 @@ export default function Field(props) {
   }
 
   function updateText(){
-    props.onAddText(input);
-    props.onClick(false);
-    disableAdd(true);
+    if (input["input1"] === '' || input['input2'] === '' || input['input3'] === '' || input['desc'] === '') {
+      alert("Complete all required fields please!");
+    }
+    else {
+      props.onAddText(input);
+      props.onClick(false);
+      disableAdd(true);
+      expand();
+    }
   }
 
   function del(){
