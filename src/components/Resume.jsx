@@ -9,7 +9,7 @@ export default function Resume(props) {
     section: {
       border: '3px solid green',
       padding: '10px',
-      height:'20%',
+      height:'17%',
       fontSize: 14
     },
   });
